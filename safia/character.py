@@ -14,6 +14,3 @@ class Character():
 
     def get_image(self):
         return self.image
-
-    def get_image2(self):
-        return self.image
