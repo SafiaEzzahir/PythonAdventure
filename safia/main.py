@@ -44,10 +44,6 @@ def draw():
     compass.move_ip(800, 100)
     compass.draw()
 
-    room_desc = Rect(100, 375, 400, 350)
-    screen.draw.filled_rect(room_desc, "light blue")
-    screen.draw.textbox(current_room.get_desc(), room_desc, color=("black"))
-
     current_room_image = Actor(current_room.get_image())
     current_room_image._surf = pygame.transform.scale(current_room_image._surf, (450, 250))
     current_room_image.move_ip(100, 50)
