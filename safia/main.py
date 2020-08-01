@@ -29,7 +29,7 @@ court.set_links(royal, enter, kitchen, throne)
 kitchen.set_links(tower2, None, None, court)
 enter.set_links(court, None, None, None)
 
-current_room = kitchen
+current_room = enter
 current_room_image = Actor(kitchen.get_image())
 current_room._surf = pygame.transform.scale(current_room_image._surf, (450, 250))
 
@@ -44,12 +44,10 @@ def draw():
     current_room_image.draw()
 
     if current_room.get_character() != None:
-        pass
         char_image = Actor(current_room.character.get_image())
         char_image._surf = pygame.transform.scale(char_image._surf, (150, 250))
         char_image.move_ip(550, 50)
         char_image.draw()
-        #print("Current room character image: "+current_room.character.get_image())
     else:
         pass
 
