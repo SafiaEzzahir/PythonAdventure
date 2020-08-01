@@ -30,14 +30,15 @@ kitchen.set_links(tower2, None, None, court)
 enter.set_links(court, None, None, None)
 
 current_room = enter
-current_room_image = Actor(kitchen.get_image())
 current_room._surf = pygame.transform.scale(current_room_image._surf, (450, 250))
 
 box = current_room.get_desc
 
 def draw():
     screen.fill("black")
-    
+    compass = Actor("compass")
+    compass._surf = pygame.transform.scale(compass._surf, (300, 200))
+    compass.move_ip(800, 100)
     current_room_image = Actor(current_room.get_image())
     current_room_image._surf = pygame.transform.scale(current_room_image._surf, (450, 250))
     current_room_image.move_ip(100, 50)
