@@ -37,7 +37,7 @@ box = current_room.get_desc
 
 def draw():
     screen.fill("black")
-
+    
     current_room_image = Actor(current_room.get_image())
     current_room_image._surf = pygame.transform.scale(current_room_image._surf, (450, 250))
     current_room_image.move_ip(100, 50)
