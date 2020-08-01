@@ -46,7 +46,7 @@ def draw():
     if current_room.get_character() != None:
         char_image = Actor(current_room.character.get_image())
         char_image._surf = pygame.transform.scale(char_image._surf, (150, 250))
-        char_image.move_ip(550, 50)
+        char_image.move_ip(555, 50)
         char_image.draw()
     else:
         pass
