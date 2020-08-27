@@ -1,4 +1,5 @@
 from room import Room
+from drawLetters import Writing
 from character import Character
 import pygame, sys
 import pgzrun
@@ -48,6 +49,11 @@ def draw():
     current_room_image._surf = pygame.transform.scale(current_room_image._surf, (450, 250))
     current_room_image.move_ip(100, 50)
     current_room_image.draw()
+
+    n = Writing("North", 150, 50, 900, 50)
+    e = Writing("East", 100, 100, 1100, 150)
+    s = Writing("South", 150, 50, 850, 300)
+    w = Writing("West", 100, 100, 700, 150)
 
     if current_room.get_character() != None:
         char_image = Actor(current_room.character.get_image())
