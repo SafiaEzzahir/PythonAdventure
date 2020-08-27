@@ -1,3 +1,6 @@
+import sys, pygame
+import pgzrun
+
 class Writing():
     def __init__(self, name, sizex, sizey, movex, movey):
         self.name = name
@@ -6,7 +9,7 @@ class Writing():
         self.movex = movex
         self.movey = movey
 
-    def draw(name, sizex, sizey, movex, movey):
-        rect = Rect(movex, movey, sizex, sizey)
-        screen.draw.filled_rect(room_desc, "red")
-        screen.draw.textbox(name, color=("black"))
+    def draw(self, screen):
+        rect = pygame.Rect(self.movex, self.movey, self.sizex, self.sizey)
+        screen.draw.filled_rect(rect, "red")
+        screen.draw.textbox(self.name, rect, color=("black"))
