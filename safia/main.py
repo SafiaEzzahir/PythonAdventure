@@ -36,10 +36,10 @@ current_room._surf = pygame.transform.scale(current_room_image._surf, (450, 250)
 
 box = current_room.get_desc
 
-n = Writing("North", 150, 50, 900, 50)
-e = Writing("East", 100, 100, 1100, 150)
-s = Writing("South", 150, 50, 850, 300)
-w = Writing("West", 100, 100, 700, 150)
+n = Writing("North", 150, 50, 905, 50)
+e = Writing("East", 100, 100, 1105, 150)
+s = Writing("South", 150, 50, 855, 300)
+w = Writing("West", 100, 100, 705, 150)
 
 
 def draw():
@@ -48,7 +48,7 @@ def draw():
 
     compass = Actor("compass")
     compass._surf = pygame.transform.scale(compass._surf, (300, 200))
-    compass.move_ip(800, 100)
+    compass.move_ip(805, 100)
     compass.draw()
 
     current_room_image = Actor(current_room.get_image())
