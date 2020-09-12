@@ -73,4 +73,17 @@ def draw():
     screen.draw.filled_rect(room_desc, "light blue")
     screen.draw.textbox(current_room.get_desc(), room_desc, color=("black"))
 
+def on_mouse_down(pos):
+    global current_room
+
+    (x,y) = pos
+    if n.is_clicked(x, y):
+        current_room = current_room.north_room
+    if e.is_clicked(x, y):
+        current_room = current_room.east_room
+    if s.is_clicked(x, y):
+        current_room = current_room.south_room
+    if w.is_clicked(x, y):
+        current_room = current_room.west_room
+    
 pgzrun.go()
